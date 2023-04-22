@@ -16,7 +16,7 @@ console.log(noSpace("There are no spaces in this string"));
 
 
 
-
+//addded a not to async
 
 
 
