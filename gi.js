@@ -76,25 +76,29 @@ function calculator(x, y) {
   y = prompt(`Choose another Number`);
 
   if (operator === "+") {
+    let answer = add(+x, +y); //the "+" before the parameter will turn the string into a number to calculate it
 
-    let answer = add(+x, +y) //the "+" before the parameter will turn the string into a number to calculate it
-
-    return (document.getElementById("calculator").innerHTML = `${x} ${operator} ${y} = ${answer}`);
+    return (document.getElementById(
+      "calculator"
+    ).innerHTML = `${x} ${operator} ${y} = ${answer}`);
   } else if (operator === "-") {
+    answer = subtract(+x, +y);
 
-  answer = subtract(+x,+y)
-
-    return (document.getElementById("calculator").innerHTML = `${x} ${operator} ${y} = ${answer}`);
+    return (document.getElementById(
+      "calculator"
+    ).innerHTML = `${x} ${operator} ${y} = ${answer}`);
   } else if (operator === "*") {
+    answer = multiply(+x, +y);
 
-     answer = multiply(+x, +y)
-
-    return (document.getElementById("calculator").innerHTML = `${x} ${operator} ${y} = ${answer}`);
+    return (document.getElementById(
+      "calculator"
+    ).innerHTML = `${x} ${operator} ${y} = ${answer}`);
   } else if (operator === "/") {
+    answer = divide(+x, +y);
 
-      answer = divide(+x, +y)
-     
-    return (document.getElementById("calculator").innerHTML = `${x} ${operator} ${y} = ${answer}`);
+    return (document.getElementById(
+      "calculator"
+    ).innerHTML = `${x} ${operator} ${y} = ${answer}`);
   } else {
     return "error try again";
   }
